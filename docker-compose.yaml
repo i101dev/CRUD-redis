@@ -1,35 +1,6 @@
 version: "3"
 
 services:
-    # server:
-    #     image: <image_name>
-    #     ports:
-    #         - "<port>:<port>"
-    #     environment:
-    #         - PORT=<port>
-    #         - NODE_ENV=production
-    #         - ADMIN_KEY=<admin_key>
-
-    #         - SERVER_URL=https://www.default.app
-
-    #         - REDIS_USER=<username>
-    #         - REDIS_PW=<password>
-    #         - REDIS_IP=172.17.0.1
-    #         - REDIS_PORT=6379
-
-    #         - MONGO_USER=<username>
-    #         - MONGO_PW=<password>
-    #         - MONGO_DB=<database_name>
-    #         - MONGO_IP=172.17.0.1
-    #         - MONGO_PORT=27017
-
-    mongo:
-        image: mongo:latest
-        ports:
-            - 27017:27017
-        volumes:
-            - mongodb_data_container:/data/mongo
-
     redis:
         image: redis
         ports:
@@ -38,7 +9,5 @@ services:
             - redis_data_container:/data/redis
 
 volumes:
-    mongodb_data_container:
-        driver: local
     redis_data_container:
         driver: local

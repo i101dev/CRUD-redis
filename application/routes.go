@@ -32,5 +32,4 @@ func loadOrderRoutes(router chi.Router) {
 	router.Get("/{id}", orderHandler.GetByID)
 	router.Put("/{id}", orderHandler.UpdateByID)
 	router.Delete("/{id}", orderHandler.DeleteByID)
-
 }
